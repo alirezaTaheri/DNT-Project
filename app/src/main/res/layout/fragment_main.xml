@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".MainActivity"
+        tools:theme="@style/AppTheme.NoActionBar">
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/toolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:translationY="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginEnd="18dp"
+                        android:text="موجودی حساب"
+                        android:id="@+id/t1"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        app:layout_constraintTop_toBottomOf="@+id/t1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="18dp"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:id="@+id/t2"
+                        android:text="216,500"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        app:layout_constraintTop_toBottomOf="@+id/t2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="18dp"
+                        android:layoutDirection="rtl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:paddingEnd="3dp"
+                            android:paddingStart="3dp"
+                            android:text="رشد"
+                            android:layout_marginEnd="8dp"
+                            android:textColor="@color/colorPrimary"
+                            android:background="@drawable/background_main_action_bar_growth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:text="17100 تومان"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/chartParent"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="180dp"
+                android:paddingBottom="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/chart"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:src="@drawable/chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp" />
+                    <LinearLayout
+                        app:layout_constraintTop_toBottomOf="@+id/chart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="کل"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="سالیانه"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="ماهیانه"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="هفتگی"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:background="@drawable/background_chart_selected_subtitle"
+                            android:layout_gravity="center"
+                            android:textColor="#ffffff"
+                            android:gravity="center"
+                            android:text="روزانه"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:text="زنده"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/wealthTitleParent"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/chartParent"
+                android:layout_height="wrap_content">
+                <TextView
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17sp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/wealthTitle"
+                    android:text="دارایی"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    style="?android:attr/actionOverflowButtonStyle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17sp"
+                    android:id="@+id/wealthIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/wealthWrapper"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wealthTitleParent"
+                android:layout_width="match_parent"
+                app:cardElevation="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/wealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/w1"
+                        layout="@layout/item_stock_positive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/item_stock_negative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:id="@+id/watchListTitleParent"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/wealthWrapper"
+                android:layout_height="wrap_content">
+                <TextView
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17sp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/watchListTitle"
+                    android:text="دیدبان"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    style="?android:attr/actionOverflowButtonStyle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17sp"
+                    android:id="@+id/watchListIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <androidx.cardview.widget.CardView
+                app:cardElevation="4dp"
+                android:id="@+id/watchListWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/watchListTitleParent">
+                <LinearLayout
+                    android:id="@+id/watchList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/item_stock_positive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/item_stock_negative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <include
+                        layout="@layout/item_stock_negative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/item_stock_positive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/item_stock_positive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <View
+                app:layout_constraintTop_toBottomOf="@+id/watchListWrapper"
+                android:layout_marginTop="65dp"
+                android:layout_width="1dp"
+                android:layout_height="1dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
