@@ -1,9 +1,10 @@
-package dnt.com.dnt;
+package dnt.com.dnt.fragments;
 
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import dnt.com.dnt.R;
 
 import android.view.LayoutInflater;
 import android.view.View;

@@ -1,5 +1,6 @@
-package dnt.com.dnt;
+package dnt.com.dnt.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.core.content.ContextCompat;
@@ -18,6 +19,9 @@ import com.robinhood.ticker.TickerUtils;
 import com.robinhood.ticker.TickerView;
 
 import java.util.Random;
+
+import dnt.com.dnt.R;
+import dnt.com.dnt.activities.StockActivity;
 
 
 public class MainFragment extends Fragment {
@@ -54,6 +58,28 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_main, container, false);
 
+        // Change Font For Fragment
+//        TypefaceUtil.setFont((ViewGroup) v);
+
+        // start stock activities
+        v.findViewById(R.id.w1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(),StockActivity.class);
+                i.putExtra(StockActivity.STOCK_NAME_PARAM,"katia");
+                startActivity(i);
+            }
+        });
+        v.findViewById(R.id.w2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(),StockActivity.class);
+                i.putExtra(StockActivity.STOCK_NAME_PARAM,"zagros");
+                startActivity(i);
+            }
+        });
+
+        handler = new Handler();
         w1 = v.findViewById(R.id.w1);
         w2 = v.findViewById(R.id.w2);
         tickerView = w1.findViewById(R.id.tickerView);
@@ -112,5 +138,7 @@ public class MainFragment extends Fragment {
 
         return v;
     }
+
+
 
 }

@@ -1,32 +1,43 @@
-package dnt.com.dnt;
+package dnt.com.dnt.activities;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.MenuItem;
-import android.widget.RelativeLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.robinhood.ticker.TickerUtils;
-import com.robinhood.ticker.TickerView;
 
-import java.util.Random;
+import dnt.com.dnt.fragments.BrowseFragment;
+import dnt.com.dnt.R;
+import dnt.com.dnt.fragments.MainFragment;
+import dnt.com.dnt.fragments.ProfileFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AbstractActivity {
 
 
     BottomNavigationView bottomNavigationView;
     MainFragment mainFragment;
     ProfileFragment profileFragment;
     BrowseFragment browseFragment;
+
+
+    @Override
+    protected Integer getContentView() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected Integer getRootView() {
+        return R.id.parentLayout;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        // No Need to setContentView()
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.action_invest);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

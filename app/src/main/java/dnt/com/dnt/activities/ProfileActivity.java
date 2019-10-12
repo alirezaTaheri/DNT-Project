@@ -1,8 +1,10 @@
-package dnt.com.dnt;
+package dnt.com.dnt.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import dnt.com.dnt.R;
 
 public class ProfileActivity extends AppCompatActivity {
 
