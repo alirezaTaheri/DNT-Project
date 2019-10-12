@@ -214,6 +214,7 @@
                         android:layout_height="wrap_content" />
 
                     <include
+                        android:id="@+id/w2"
                         layout="@layout/item_stock_negative"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />

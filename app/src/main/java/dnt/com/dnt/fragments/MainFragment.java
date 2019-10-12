@@ -51,11 +51,21 @@ public class MainFragment extends Fragment {
         // Change Font For Fragment
         TypefaceUtil.setFont((ViewGroup) v);
 
-        // startKatiaActivity
+        // start stock activities
         v.findViewById(R.id.w1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(),StockActivity.class));
+                Intent i = new Intent(getContext(),StockActivity.class);
+                i.putExtra(StockActivity.STOCK_NAME_PARAM,"katia");
+                startActivity(i);
+            }
+        });
+        v.findViewById(R.id.w2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(),StockActivity.class);
+                i.putExtra(StockActivity.STOCK_NAME_PARAM,"zagros");
+                startActivity(i);
             }
         });
 
