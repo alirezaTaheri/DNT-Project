@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
+    android:id="@+id/parentLayout"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:theme="@style/AppTheme.NoActionBar">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layoutDirection="rtl"
-        android:id="@+id/appbar"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        app:elevation="15dp"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:theme="@style/AppTheme">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            app:contentInsetStartWithNavigation="-10dp"
-            app:contentInsetLeft="-10dp"
-            app:contentInsetStart="-10dp"
-            app:layout_collapseMode="pin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:popupTheme="@style/AppTheme">
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
-
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_main_bottom_navigation"
+        app:itemIconSize="20dp"
+        app:itemIconTint="@color/foreground_main_bottom_navigation_item"
+        android:background="@android:color/white"
+        app:itemBackground="@android:color/white"
+        app:labelVisibilityMode="unlabeled"/>
+</RelativeLayout>
