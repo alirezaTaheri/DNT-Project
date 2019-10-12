@@ -13,16 +13,29 @@ import dnt.com.dnt.R;
 import dnt.com.dnt.fragments.MainFragment;
 import dnt.com.dnt.fragments.ProfileFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AbstractActivity {
 
 
     BottomNavigationView bottomNavigationView;
     MainFragment mainFragment;
     ProfileFragment profileFragment;
+
+    @Override
+    protected Integer getContentView() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected Integer getRootView() {
+        return R.id.parentLayout;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        // No Need to setContentView()
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.action_invest);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
