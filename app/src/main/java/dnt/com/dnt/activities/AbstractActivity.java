@@ -48,6 +48,7 @@ public abstract class AbstractActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if(!isContentSet){
             if(getContentView()!=null) setContentView(getContentView());
             else return;

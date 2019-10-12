@@ -1,7 +1,5 @@
-package dnt.com.dnt;
+package dnt.com.dnt.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,6 +14,8 @@ import com.robinhood.ticker.TickerUtils;
 import com.robinhood.ticker.TickerView;
 
 import java.util.Random;
+
+import dnt.com.dnt.R;
 
 
 public class MainFragment extends Fragment {
