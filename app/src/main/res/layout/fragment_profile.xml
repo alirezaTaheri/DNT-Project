@@ -77,10 +77,11 @@
         </androidx.cardview.widget.CardView>
 
         <HorizontalScrollView
+            android:id="@+id/scrollView"
             android:scrollbars="none"
             android:layoutDirection="rtl"
             android:translationZ="2dp"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="170dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent">
@@ -95,5 +96,113 @@
             </LinearLayout>
 
         </HorizontalScrollView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/options"
+            app:layout_constraintTop_toBottomOf="@id/scrollView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="5dp"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/setting1"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                android:layoutDirection="rtl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="تاریخچه معاملات"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="@color/grey"
+                    android:text="سابقه خرید و فروش"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+                <LinearLayout
+                    android:padding="5dp"
+                    android:background="?selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                android:id="@+id/setting2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintTop_toBottomOf="@id/setting1"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical"
+                android:layoutDirection="rtl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="تنظیمات حساب"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="@color/grey"
+                    android:text="دسترسی‌ها، رمز عبور و اعلان‌ها"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+                <LinearLayout
+                    android:padding="5dp"
+                    android:background="?selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                android:id="@+id/setting3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@id/setting2"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical"
+                android:layoutDirection="rtl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="پشتیبانی"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="@color/grey"
+                    android:text="آموزش و سوالات متداول"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+                <View
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/setting3"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/options"
+            android:layout_marginTop="65dp"
+            android:layout_width="1dp"
+            android:layout_height="1dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

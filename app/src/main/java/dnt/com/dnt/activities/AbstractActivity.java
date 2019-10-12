@@ -9,7 +9,7 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import dnt.com.dnt.utils.TypefaceUtil;
+
 
 public abstract class AbstractActivity extends AppCompatActivity {
 
@@ -54,7 +54,7 @@ public abstract class AbstractActivity extends AppCompatActivity {
             else return;
         }
 
-        if(getRootView()!=null)
-            TypefaceUtil.setFont((ViewGroup) findViewById(getRootView()));
+//        if(getRootView()!=null)
+//            TypefaceUtil.setFont((ViewGroup) findViewById(getRootView()));
     }
 }

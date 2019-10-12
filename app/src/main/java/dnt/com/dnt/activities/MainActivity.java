@@ -1,7 +1,6 @@
 package dnt.com.dnt.activities;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
@@ -9,6 +8,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import dnt.com.dnt.fragments.BrowseFragment;
 import dnt.com.dnt.R;
 import dnt.com.dnt.fragments.MainFragment;
 import dnt.com.dnt.fragments.ProfileFragment;
@@ -19,6 +19,8 @@ public class MainActivity extends AbstractActivity {
     BottomNavigationView bottomNavigationView;
     MainFragment mainFragment;
     ProfileFragment profileFragment;
+    BrowseFragment browseFragment;
+
 
     @Override
     protected Integer getContentView() {
@@ -48,7 +50,9 @@ public class MainActivity extends AbstractActivity {
                         ft.commit();
                         return true;
                     case R.id.action_browse:
-                        return false;
+                        ft.replace(R.id.parentLayout, browseFragment);
+                        ft.commit();
+                        return true;
                     case R.id.action_profile:
                         ft.replace(R.id.parentLayout, profileFragment);
                         ft.commit();
@@ -61,6 +65,7 @@ public class MainActivity extends AbstractActivity {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         mainFragment = MainFragment.newInstance();
         profileFragment = ProfileFragment.newInstance();
+        browseFragment = BrowseFragment.newInstance();
         ft.add(R.id.parentLayout, mainFragment);
         ft.commit();
     }

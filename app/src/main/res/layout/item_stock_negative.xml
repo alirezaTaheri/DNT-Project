@@ -2,9 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:background="?selectableItemBackground"
+    android:focusable="true"
+    android:clickable="true"
     android:layout_height="100dp">
 
     <LinearLayout
+        android:focusable="false"
+        android:clickable="false"
         android:layout_centerVertical="true"
         android:layoutDirection="rtl"
         android:id="@+id/linearLayout"
@@ -19,6 +24,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <TextView
+            android:focusable="false"
+            android:clickable="false"
             android:id="@+id/textView2"
             android:textColor="@color/colorPrimaryDark"
             android:layout_width="wrap_content"
@@ -27,6 +34,8 @@
             android:textSize="20sp" />
 
         <TextView
+            android:focusable="false"
+            android:clickable="false"
             android:textColor="@color/colorPrimaryDark"
             android:id="@+id/textView32"
             android:layout_width="wrap_content"
@@ -36,6 +45,8 @@
     </LinearLayout>
 
     <ImageView
+        android:focusable="false"
+        android:clickable="false"
         android:layout_centerInParent="true"
         android:id="@+id/imageView"
         android:layout_width="65dp"
@@ -52,6 +63,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.robinhood.ticker.TickerView
+        android:focusable="false"
+        android:clickable="false"
         android:padding="3dp"
         android:layout_centerVertical="true"
         android:textSize="19sp"
