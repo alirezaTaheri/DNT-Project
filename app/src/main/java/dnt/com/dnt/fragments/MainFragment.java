@@ -16,6 +16,7 @@ import com.robinhood.ticker.TickerView;
 import java.util.Random;
 
 import dnt.com.dnt.R;
+import dnt.com.dnt.utils.TypefaceUtil;
 
 
 public class MainFragment extends Fragment {
@@ -44,6 +45,9 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_main, container, false);
+
+        // Change Font For Fragment
+        TypefaceUtil.setFont((ViewGroup) v);
 
         handler = new Handler();
         w1 = v.findViewById(R.id.w1);
