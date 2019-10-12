@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     MainFragment mainFragment;
     ProfileFragment profileFragment;
+    BrowseFragment browseFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
                         ft.commit();
                         return true;
                     case R.id.action_browse:
-                        return false;
+                        ft.replace(R.id.parentLayout, browseFragment);
+                        ft.commit();
+                        return true;
                     case R.id.action_profile:
                         ft.replace(R.id.parentLayout, profileFragment);
                         ft.commit();
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         mainFragment = MainFragment.newInstance();
         profileFragment = ProfileFragment.newInstance();
+        browseFragment = BrowseFragment.newInstance();
         ft.add(R.id.parentLayout, mainFragment);
         ft.commit();
     }

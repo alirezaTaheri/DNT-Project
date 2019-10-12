@@ -1,16 +1,18 @@
 package dnt.com.dnt;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.robinhood.ticker.TickerUtils;
 import com.robinhood.ticker.TickerView;
@@ -19,10 +21,17 @@ import java.util.Random;
 
 
 public class MainFragment extends Fragment {
-    RelativeLayout w1;
-    TickerView tickerView;
+    RelativeLayout w1, w2;
+    LinearLayout watchListLayout;
+    TickerView tickerView, tickerView2;
     Handler handler;
+    Random random;
 
+    private String[] watchList = {"کهرام","دهدشت","فوکا","پارتا","سیستم","شاراک","فجام","کیسون"};
+    private String[] watchListSub = {"گرانیت بهسرام","صنایع دهدشت","فولاد کاویان","مجتمع آرتاویل تایر","همکاران سیستم","پتروشیمی شازند","جام دارو","شرکت کیسون"};
+    private String[] watchListChanges = {"0.73","1.14","2.94","3.26","2.87","1.27","0.86","2.64"};
+    private int[] watchListChart = {R.drawable.green_1,R.drawable.red_1,R.drawable.green_2,R.drawable.green_3,R.drawable.red_1,R.drawable.red_2,R.drawable.red_3,R.drawable.green_4};
+    private boolean[] watchListPositive = {true,false,true,true,false,false,false,true};
     public MainFragment() {
         // Required empty public constructor
     }
@@ -45,20 +54,62 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_main, container, false);
 
-        handler = new Handler();
         w1 = v.findViewById(R.id.w1);
+        w2 = v.findViewById(R.id.w2);
         tickerView = w1.findViewById(R.id.tickerView);
+        tickerView2 = w2.findViewById(R.id.tickerView);
         tickerView.setCharacterLists(TickerUtils.provideNumberList());
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-                Random random = new Random();
-                String a = String.valueOf(random.nextInt(999));
-                String b = String.valueOf(random.nextInt(99));
-                tickerView.setText(a+"."+b);
-                handler.postDelayed(this, random.nextInt(3000)+3000);
-            }
-        });
+        tickerView2.setCharacterLists(TickerUtils.provideNumberList());
+        if (handler == null) {
+            handler = new Handler();
+            final Random random = new Random();
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    String a = String.valueOf(random.nextInt(8));
+                    String b = String.valueOf(random.nextInt(99));
+                    tickerView.setText(a + "." + b+"%");
+                    handler.postDelayed(this, random.nextInt(3000) + 3000);
+                }
+            });
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    String a = String.valueOf(random.nextInt(8));
+                    String b = String.valueOf(random.nextInt(99));
+                    tickerView2.setText(a + "." + b+"%");
+                    handler.postDelayed(this, random.nextInt(10000) + 4000);
+                }
+            });
+        }
+        watchListLayout = v.findViewById(R.id.watchList);
+        random = new Random();
+        for (int a = 0;a<watchList.length;a++){
+            final View stockItem = inflater.inflate(R.layout.item_stock,null);
+            ((TextView)stockItem.findViewById(R.id.symbol)).setText(watchList[a]);
+            ((TextView)stockItem.findViewById(R.id.name)).setText(watchListSub[a]);
+            ((TickerView)stockItem.findViewById(R.id.tickerView)).setCharacterLists(TickerUtils.provideNumberList());
+            ((TickerView)stockItem.findViewById(R.id.tickerView)).setText(watchListChanges[a]+"%");
+            ((TickerView)stockItem.findViewById(R.id.tickerView)).setBackground(ContextCompat.getDrawable(getContext(), watchListPositive[a]?R.drawable.background_item_stock_positive:R.drawable.background_item_stock_negative));
+            ((ImageView)stockItem.findViewById(R.id.chart)).setImageDrawable(ContextCompat.getDrawable(getContext(), watchListChart[a]));
+            final int finalA = a;
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    String change = watchListChanges[finalA];
+                    int a = Integer.parseInt(change.split("\\.")[0]);
+                    int b = Integer.parseInt(change.split("\\.")[1]);
+                    a = a - random.nextInt(3);
+                    a = a + random.nextInt(6)+3;
+                    b = random.nextInt(99);
+                    ((TickerView)stockItem.findViewById(R.id.tickerView)).setText(String.valueOf(a)+"."+String.valueOf(b)+"%");
+                    handler.postDelayed(this, random.nextInt(15000) + 4000);
+                }
+            });
+            watchListLayout.addView(stockItem);
+        }
+
+
         return v;
     }
 
