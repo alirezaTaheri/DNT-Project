@@ -1,5 +1,6 @@
 package dnt.com.dnt.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,7 @@ import com.robinhood.ticker.TickerView;
 import java.util.Random;
 
 import dnt.com.dnt.R;
+import dnt.com.dnt.activities.StockActivity;
 import dnt.com.dnt.utils.TypefaceUtil;
 
 
@@ -49,6 +51,14 @@ public class MainFragment extends Fragment {
         // Change Font For Fragment
         TypefaceUtil.setFont((ViewGroup) v);
 
+        // startKatiaActivity
+        v.findViewById(R.id.w1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(),StockActivity.class));
+            }
+        });
+
         handler = new Handler();
         w1 = v.findViewById(R.id.w1);
         tickerView = w1.findViewById(R.id.tickerView);
@@ -65,5 +75,7 @@ public class MainFragment extends Fragment {
         });
         return v;
     }
+
+
 
 }
