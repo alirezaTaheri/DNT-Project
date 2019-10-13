@@ -7,6 +7,9 @@
     tools:showIn="@layout/fragment_browse"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
+        android:background="?selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="125dp"
@@ -17,6 +20,8 @@
         android:paddingBottom="3dp">
 
         <TextView
+            android:focusable="false"
+            android:clickable="false"
             android:textSize="20sp"
             android:id="@+id/name"
             android:layout_alignParentTop="true"
@@ -26,6 +31,8 @@
             android:text="های‌وب" />
 
         <TextView
+            android:focusable="false"
+            android:clickable="false"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
             android:id="@+id/change"
@@ -36,6 +43,8 @@
             android:text="1.27%" />
 
         <TextView
+            android:focusable="false"
+            android:clickable="false"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
             android:id="@+id/price"

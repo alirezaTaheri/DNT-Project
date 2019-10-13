@@ -35,7 +35,7 @@ public class StockActivity extends AbstractActivity {
         }
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        StockFragment stock_fragment = StockFragment.newInstance();
+        StockFragment stock_fragment = StockFragment.newInstance(stockName);
         ft.replace(getRootView(), stock_fragment);
         ft.commit();
     }

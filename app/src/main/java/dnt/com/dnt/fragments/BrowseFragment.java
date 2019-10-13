@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import dnt.com.dnt.R;
+import dnt.com.dnt.utils.FaNum;
+import dnt.com.dnt.utils.TypefaceUtil;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +48,10 @@ public class BrowseFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_browse, container, false);
+
+        // Change Font For Fragment
+        TypefaceUtil.setFont((ViewGroup) v);
+
         categoriesScrollView = v.findViewById(R.id.categoriesScrollView);
         categoriesRow1 = v.findViewById(R.id.categoriesRow1);
         categoriesRow2 = v.findViewById(R.id.categoriesRow2);
@@ -53,7 +59,7 @@ public class BrowseFragment extends Fragment {
         for (int a = 0; a<categories.length;a++){
             View categoryItem = inflater.inflate(R.layout.item_category,null);
             ((TextView)categoryItem.findViewById(R.id.name)).setText(categories[a]);
-            ((TextView)categoryItem.findViewById(R.id.badge)).setText(categoriesCount[a]);
+            ((TextView)categoryItem.findViewById(R.id.badge)).setText(FaNum.convert(categoriesCount[a]));
             CardView.LayoutParams lp = new CardView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             lp.topMargin = 10;
             lp.leftMargin = 10;
@@ -69,8 +75,8 @@ public class BrowseFragment extends Fragment {
         for (int a = 0;a<favorites.length;a++){
             View item = inflater.inflate(R.layout.item_browse_fragment_popular,null);
             ((TextView)item.findViewById(R.id.name)).setText(favorites[a]);
-            ((TextView)item.findViewById(R.id.price)).setText(favoritesPrices[a]);
-            ((TextView)item.findViewById(R.id.change)).setText(favoritesChanges[a]);
+            ((TextView)item.findViewById(R.id.price)).setText(FaNum.convert(favoritesPrices[a]));
+            ((TextView)item.findViewById(R.id.change)).setText(FaNum.convert(favoritesChanges[a]+"%"));
             if (a%3 == 2) {
                 ((TextView) item.findViewById(R.id.price)).setTextColor(getContext().getColor(R.color.red));
                 ((TextView) item.findViewById(R.id.change)).setTextColor(getContext().getColor(R.color.red));

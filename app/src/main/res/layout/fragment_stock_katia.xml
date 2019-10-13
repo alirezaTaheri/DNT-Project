@@ -84,6 +84,7 @@
                             android:textColor="@color/colorPrimary" />
 
                         <TextView
+                            android:id="@+id/t3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="17100 تومان"
@@ -217,8 +218,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"
-                        android:src="@drawable/katia_statics" />
+                        android:scaleType="fitEnd" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -238,8 +238,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"
-                        android:src="@drawable/katia_statics2" />
+                        android:scaleType="fitEnd" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
@@ -274,8 +273,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:adjustViewBounds="true"
-                            android:scaleType="fitEnd"
-                            android:src="@drawable/katia_news" />
+                            android:scaleType="fitEnd"/>
 
                         <View
                             android:id="@+id/view"
@@ -323,8 +321,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"
-                        android:src="@drawable/katia_tahlil" />
+                        android:scaleType="fitEnd" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -358,8 +355,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="64dp"
                                     android:layout_margin="4dp"
-                                    android:adjustViewBounds="true"
-                                    android:src="@drawable/katia_tahlil1" />
+                                    android:adjustViewBounds="true"/>
 
                                 <View
                                     android:id="@+id/view3"
@@ -394,8 +390,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="64dp"
                                     android:layout_margin="4dp"
-                                    android:adjustViewBounds="true"
-                                    android:src="@drawable/katia_tahlil2" />
+                                    android:adjustViewBounds="true" />
 
                                 <View
                                     android:id="@+id/view4"
@@ -451,11 +446,25 @@
 
 
                             <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/x"
                                 android:layout_width="70dp"
                                 android:layout_height="80dp"
                                 android:layout_margin="8dp"
-                                android:adjustViewBounds="true"
-                                android:src="@drawable/katia_portfo1" />
+                                android:adjustViewBounds="true" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/y"
+                                android:layout_width="70dp"
+                                android:layout_height="80dp"
+                                android:layout_margin="8dp"
+                                android:adjustViewBounds="true"/>
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
@@ -469,7 +478,7 @@
                                 android:layout_height="80dp"
                                 android:layout_margin="8dp"
                                 android:adjustViewBounds="true"
-                                android:src="@drawable/katia_portfo2" />
+                                android:id="@+id/z"/>
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
@@ -480,10 +489,10 @@
 
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:layout_width="70dp"
+                                android:id="@+id/xx"
                                 android:layout_height="80dp"
                                 android:layout_margin="8dp"
-                                android:adjustViewBounds="true"
-                                android:src="@drawable/katia_portfo3" />
+                                android:adjustViewBounds="true"/>
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
@@ -494,24 +503,10 @@
 
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:layout_width="70dp"
+                                android:id="@+id/yy"
                                 android:layout_height="80dp"
                                 android:layout_margin="8dp"
-                                android:adjustViewBounds="true"
-                                android:src="@drawable/katia_portfo4" />
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="4dp">
-
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="70dp"
-                                android:layout_height="80dp"
-                                android:layout_margin="8dp"
-                                android:adjustViewBounds="true"
-                                android:src="@drawable/katia_portfo5" />
+                                android:adjustViewBounds="true"/>
                         </androidx.cardview.widget.CardView>
 
 
@@ -550,8 +545,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"
-                        android:src="@drawable/katia_about" />
+                        android:scaleType="fitEnd"/>
 
                 </androidx.cardview.widget.CardView>
 
