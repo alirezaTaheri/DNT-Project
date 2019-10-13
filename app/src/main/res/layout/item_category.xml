@@ -1,59 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView android:layout_marginTop="8dp"
-    android:layout_marginBottom="6dp"
-    android:layout_marginEnd="6dp"
-    android:layout_marginStart="8dp"
-    android:layoutDirection="rtl"
-    app:cardCornerRadius="19dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    tools:showIn="@layout/fragment_browse"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-<RelativeLayout
-    android:background="?selectableItemBackground"
-    android:focusable="true"
-    android:clickable="true"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingLeft="6dp"
-    android:paddingRight="7dp"
-    android:paddingTop="3dp"
-    android:paddingBottom="3dp"
-    >
-<TextView
-    android:focusable="false"
-    android:clickable="false"
-    android:layout_centerVertical="true"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
-    android:paddingTop="3dp"
-    android:paddingBottom="3dp"
-    android:gravity="center"
-    android:textColor="@color/colorPrimaryDark"
-    android:background="@drawable/background_category_item_badge"
-    android:id="@+id/badge"
-    android:layout_toEndOf="@+id/name"
-    android:text="23"
-    android:textSize="16sp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
-    <TextView
-        android:focusable="false"
-        android:clickable="false"
-        android:layout_marginEnd="5dp"
-        android:layout_alignParentStart="true"
-        android:textSize="16sp"
-        android:layout_marginStart="6dp"
-        android:layout_centerVertical="true"
-        android:gravity="center"
-        android:id="@+id/name"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginBottom="6dp"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    app:cardCornerRadius="20dp"
+    tools:showIn="@layout/fragment_browse">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="خودرو" />
-</RelativeLayout>
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/badge"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/name"
+            android:background="@drawable/background_category_item_badge"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="23"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="خودرو"
+            android:textSize="14sp" />
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>

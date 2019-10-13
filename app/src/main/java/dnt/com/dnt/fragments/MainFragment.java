@@ -65,8 +65,7 @@ public class MainFragment extends Fragment {
         t3 = v.findViewById(R.id.t3);
         t2.setText(FaNum.convert("216,500"));
         t3.setText(FaNum.convert("17,100 تومان"));
-        // Change Font For Fragment
-        TypefaceUtil.setFont((ViewGroup) v);
+
 
         // start stock activities
         v.findViewById(R.id.w1).setOnClickListener(new View.OnClickListener() {
@@ -141,6 +140,8 @@ public class MainFragment extends Fragment {
             watchListLayout.addView(stockItem);
         }
 
+        // Change Font For Fragment
+        TypefaceUtil.setFont((ViewGroup) v);
 
         return v;
     }

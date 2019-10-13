@@ -29,27 +29,28 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/t1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="38dp"
                     android:layout_marginEnd="18dp"
                     android:text="موجودی حساب"
-                    android:id="@+id/t1"
                     android:textColor="#ffffff"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
-                    app:layout_constraintTop_toBottomOf="@+id/t1"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="18dp"
-                    android:textColor="#ffffff"
-                    android:textSize="25sp"
-                    android:id="@+id/t2"
                     android:text="216,500"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textColor="#ffffff"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t1" />
                 <LinearLayout
                     app:layout_constraintTop_toBottomOf="@+id/t2"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -58,21 +59,25 @@
                     android:layoutDirection="rtl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
+
                     <TextView
-                        android:paddingEnd="3dp"
-                        android:paddingStart="3dp"
-                        android:text="رشد"
-                        android:layout_marginEnd="8dp"
-                        android:textColor="@color/colorPrimary"
-                        android:background="@drawable/background_main_action_bar_growth"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/background_main_action_bar_growth"
+                        android:paddingStart="3dp"
+                        android:paddingEnd="3dp"
+                        android:text="رشد"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+
                     <TextView
                         android:id="@+id/t3"
-                        android:textColor="#ffffff"
-                        android:text="17100 تومان"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="17100 تومان"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
@@ -124,18 +129,20 @@
                 android:layoutDirection="rtl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
-                    android:textSize="18sp"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="تاریخچه معاملات"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
                 <TextView
-                    android:textSize="15sp"
-                    android:textColor="@color/grey"
-                    android:text="سابقه خرید و فروش"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="سابقه خرید و فروش"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp" />
             </LinearLayout>
                 <LinearLayout
                     android:padding="5dp"
@@ -152,18 +159,20 @@
                 android:layoutDirection="rtl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:textSize="18sp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:text="تنظیمات حساب"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:textSize="15sp"
-                    android:textColor="@color/grey"
-                    android:text="دسترسی‌ها، رمز عبور و اعلان‌ها"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="تنظیمات حساب"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="دسترسی‌ها، رمز عبور و اعلان‌ها"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp" />
             </LinearLayout>
                 <LinearLayout
                     android:padding="5dp"
@@ -180,18 +189,20 @@
                 android:layoutDirection="rtl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:textSize="18sp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:text="پشتیبانی"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:textSize="15sp"
-                    android:textColor="@color/grey"
-                    android:text="آموزش و سوالات متداول"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="پشتیبانی"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="آموزش و سوالات متداول"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp" />
             </LinearLayout>
                 <View
                     android:layout_marginTop="10dp"

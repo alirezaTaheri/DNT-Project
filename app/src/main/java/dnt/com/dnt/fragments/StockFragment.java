@@ -1,5 +1,6 @@
 package dnt.com.dnt.fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -124,6 +125,15 @@ public class StockFragment extends Fragment {
 //                layout = R.layout.fragment_stock_katia;
             }
         }
+
+
+        v.findViewById(R.id.f_stock_img_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Activity a = getActivity();
+                if(a!=null) a.onBackPressed();
+            }
+        });
 
 
         return v;

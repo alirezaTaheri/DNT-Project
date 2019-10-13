@@ -58,6 +58,7 @@ public class BrowseFragment extends Fragment {
         categoriesRow3 = v.findViewById(R.id.categoriesRow3);
         for (int a = 0; a<categories.length;a++){
             View categoryItem = inflater.inflate(R.layout.item_category,null);
+            TypefaceUtil.setFont((ViewGroup) categoryItem);
             ((TextView)categoryItem.findViewById(R.id.name)).setText(categories[a]);
             ((TextView)categoryItem.findViewById(R.id.badge)).setText(FaNum.convert(categoriesCount[a]));
             CardView.LayoutParams lp = new CardView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -74,6 +75,7 @@ public class BrowseFragment extends Fragment {
         popularLayout = v.findViewById(R.id.popularLayout);
         for (int a = 0;a<favorites.length;a++){
             View item = inflater.inflate(R.layout.item_browse_fragment_popular,null);
+            TypefaceUtil.setFont((ViewGroup) item);
             ((TextView)item.findViewById(R.id.name)).setText(favorites[a]);
             ((TextView)item.findViewById(R.id.price)).setText(FaNum.convert(favoritesPrices[a]));
             ((TextView)item.findViewById(R.id.change)).setText(FaNum.convert(favoritesChanges[a]+"%"));

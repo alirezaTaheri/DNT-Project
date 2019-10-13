@@ -22,7 +22,9 @@
         <TextView
             android:focusable="false"
             android:clickable="false"
-            android:textSize="20sp"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:maxLines="1"
             android:id="@+id/name"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
@@ -31,27 +33,27 @@
             android:text="های‌وب" />
 
         <TextView
-            android:focusable="false"
-            android:clickable="false"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
             android:id="@+id/change"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:text="1.27%" />
+            android:clickable="false"
+            android:focusable="false"
+            android:text="1.27%"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
 
         <TextView
-            android:focusable="false"
-            android:clickable="false"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/change"
             android:layout_alignParentRight="true"
-            android:text="1578.8" />
+            android:clickable="false"
+            android:focusable="false"
+            android:text="1578.8"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
